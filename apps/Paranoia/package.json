@@ -1,0 +1,35 @@
+{
+  "name": "@repo/paranoia",
+  "version": "0.0.0",
+  "license": "MIT",
+  "author": "Yasin Çakmak <mishucon@pm.me> (https://github.com/mishuw/)",
+  "type": "module",
+  "scripts": {
+    "build": "tsup",
+    "dev": "pnpm nodemon --exec tsx index.ts",
+    "lint": "eslint . --max-warnings 0",
+    "lint:fix": "eslint --fix .",
+    "start": "node dist/index.js",
+    "test:e2e": "pnpm playwright test",
+    "type-check": "tsc --noEmit"
+  },
+  "lint-staged": {
+    "*.{js,mjs,jsx,ts,mts,tsx}": "eslint --fix",
+    "*": [
+      "prettier --write --ignore-unknown",
+      "cspell --no-progress --no-summary --no-must-find-files --unique"
+    ]
+  },
+  "dependencies": {
+    "@napi-rs/canvas": "0.1.94",
+    "@repo/client": "workspace:*",
+    "@repo/config": "workspace:*",
+    "@repo/db": "workspace:*",
+    "@repo/shared": "workspace:*",
+    "discord.js": "^14.25.1"
+  },
+  "devDependencies": {
+    "@repo/client": "workspace:*",
+    "@types/node": "24.9.2"
+  }
+}

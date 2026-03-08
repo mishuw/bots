@@ -1,0 +1,5 @@
+ommit-msg:
+  parallel: true
+  jobs:
+    - name: commitlint
+      run: pnpm commitlint --edit {1}
