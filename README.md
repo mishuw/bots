@@ -1,3 +1,6 @@
+> [!WARNING]
+> Custom Packagesleri vermem kendi handlerınıza göre düzenleyin!
+
 # 🚀 Wosski Pack — Modern Discord Bot Monorepo
 
 <div align="center">
